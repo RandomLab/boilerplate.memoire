@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Author Name" />
+    <meta name="description" content="This a boilerplate HTML template" />
+    <meta name="keywords" content="boilerplate, html, website, development" />
+    <title>Titre de mon mémoire</title>
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/fonts.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/print.css" />
+</head>
+<body>
+
+  <main id="main" role="main" class="container">
+      <section id="header" class="header">
+          <h1>Des serveurs  à la fédération féministe</h1>
+          <figure>
+              <img src="images/datacenter.webp" alt="Logo" />
+              <figcaption>Travail en cours sur un serveur</figcaption>
+          </figure>
+          <p>
+              Nous n'avons souvent aucune idée de l'impact de nos simples actions
+              sur les autres, à travers ce lien invisible qui nous unit. Il ne s'agit
+              jamais de question de « masse critique », dans ce monde hyperconnecté,
+              mais plutôt de connections critiques. Grace Lee Boggs
+          </p>
+      </section>
+      <section id="chapitre" class="chapitre">
+          <h2>Introduction</h2>
+          <p>Dans ce texte, nous adoptons des pratiques de tissage de réseaux
+              féministes de solidarité et de soins <sup><a href="#fn:1">1</a></sup>
+              à l'époque de la création de mondes hybrides en ligne et hors ligne
+              (Haraway 35f). Plus précisément, nous étudions les possibilités de
+              devenir une fédération féministe, qui accompagnent la poursuite d'un
+              projet de plateforme vidéo féministe basé sur le logiciel PeerTube
+              (tube.systerserver.net). L'idée d'installer, de maintenir et
+              d'adapter PeerTube afin de créer une plateforme vidéo féministe est née
+              de la collaboration soudée de trois serveurs féministes: <i>Anarchaserver</i>
+              (anarchaserver.org), Systerserver (systerserver.net) et Leverburns
+              (terminal.leverburns.blue).Chacun de ces serveurs utilise des logiciels
+              gratuits et open source, soutenant diverses méthodes d'organisation
+              technopolitique, comme l'hébergement multimédia dans le cloud et des
+              outils pour créer des sondages, ainsi que l'hébergement de sites web
+              cyber/technoféministes archivés. Alors que certain·e·s sysadmins,
+              impliqué·e·s dans l'installation de PeerTube, sont été déjà éngagé·e·s
+              dans deux ou même trois serveurs féministes, Anarchaserver et Lever
+              Burns ont principalement soutenu le projet avec leurs outils, tandis que
+              la plateforme PeerTube s'est réalisée via et sur Systerserver. Pour
+              cette raison, nous nous concentrons sur les pratiques entourant
+              Systerserver et sur le groupe d'administrateur·rice·s système
+              (sysadmins) activement impliqué·e·s dans le projet PeerTube. Les
+              auteur·e·s et contributeur·ice·s de ce texte sont des femmes, des
+              personnes trans et non binaires, géolocalisé·e·s en Europe, qui font
+              actuellement partie de Systerserver. Systerserver s'organise
+              principalement par le biais de listes de diffusion auto-hébergées,
+              d'appels vidéo <sup><a href="#fn:2">2</a></sup> et d'autres outils permettant des sessions de travail partagées, ainsi
+              que des réunions occasionnelles en personne lors de hackathons
+              féministes ou d'autres événements liés au projet.
+          </p>
+          <figure>
+              <img src="images/datacenter2.webp" alt="Logo" />
+              <figcaption>Datacenter</figcaption>
+          </figure>
+          <p>
+              La plateforme vidéo a été mise en place avec le soutien d'un fonds d'art
+              belge reçu en 2021, non pas comme une infrastructure permanente, mais
+              comme un processus expérimental de partage de vidéos artistiques et de
+              diffusion en direct. Un an plus tard, à la fin de la période de
+              financement, deux choses sont devenues claires : bien que les vidéastes <sup><a href="#fn:3">3</a></sup>
+              aient besoin d'accueillir leur art et leur contenu dans des
+              environnements féministes et communautaires, nous ne souhaitions pas
+              devenir une autre infrastructure de services centralisée. Grâce à une
+              nouvelle subvention d'un fonds de design néerlandais, nous avons plutôt
+              décidé de favoriser les autres collectifs en leur permettant d'héberger
+              leurs propres infrastructures et de faire partie d'une fédération
+              féministe émergente de plateformes vidéo. Le processus d'écriture sur
+              les possibilités de fédération féministe a débuté avec la participation
+              de Systerserver à l'atelier Minor Tech,
+              où les questions relatives à l'évolutivité ont été discutées et
+              explorées. La « scalabilité » est plus qu'une simple catégorie
+              descriptive : elle est aussi imprégnée de l'obligation éthique de
+              faciliter la participation (Sterne VII), c'est-à-dire d'impliquer le
+              plus grand nombre de personnes possible, sinon de « changer le monde ».
+              Dans ce sens, les projets à petite échelle sont évalués selon leur
+              potentiel à « grandir » et à « devenir majeurs » à terme. Les projets ou
+              collectifs, comme les serveurs féministes, considérés comme « de niche »
+              ou « à petite échelle », impliquent généralement un nombre limité de
+              personnes, connues seulement de certains contre-publics (Travers) ou de
+              cercles d'ami·e·s. Ils ne sont pas orientés vers le profit ni
+              l'efficacité, et travaillent souvent avec un ancrage (trans)local, où
+              les géographies et les cultures se rejoignent dans des espaces virtuels
+              et physiques, ce qui rend leur reproduction difficile. À partir de nos
+              pratiques dans l'administration du système et notre expérience dans la
+              construction collective d'une plateforme vidéo féministe, nous
+              explorons le chemin « des serveurs féministes à la fédération féministe
+              ». En nous basant sur une approche techno-féministe des questions
+              politiques et de genre, liées à la technologie, nous examinons comment
+              la fédération,
+              ainsi que les technologies et protocoles de réseaux sociaux
+              décentralisés, peuvent faciliter ce processus. Quels sont les défis à
+              relever lors de la formation et du développement d'une fédération
+              féministe ?
+          </p>
+      </section>
+      <section id="notes" class="notes">
+          <ol>
+              <li id="fn:1">
+                  <p>Formulation d'après *spideralex*, "Feministische Infrastruktur" 59.</p>
+              </li>
+              <li id="fn:2">
+                  <p>Les listes suivantes font partie d'un réseau exhaustif de serveurs féministes : <a href="https://lists.genderchangers.org/mailman/listinfo/adminsysters" target="_blank">https://lists.genderchangers.org/mailman/listinfo/adminsysters</a>
+                  </p>
+              </li>
+              <li id="fn:3">
+                  <p>Les vidéastes ont pris contact avec la plateforme vidéo de Systerserver via les résidences et la Convergence <a href="https://zoiahorn.anarchaserver.org/thf2022/bienvenides-a-la-convergencia-transhackfeminista-2022/">https://zoiahorn.anarchaserver.org/thf2022/bienvenides-a-la-convergencia-transhackfeminista-2022/</a>.
+                  </p>
+              </li>
+          </ol>
+      </section>
+  </main>
+
+</body>
+</html>

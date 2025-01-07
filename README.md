@@ -1,17 +1,23 @@
+# Boilerplate pour les mémoires
 
-Poids final du dossier max : 3mo
-Structure :
-index.html
-assets/
-css/
-reset.css
-style.css
-fonts/
-<font>.woff2
+## Nomenclature
 
------
-Avant
------
+Le poids final du dossier est de 3 mo max
+Le dossier est nommé avec prenom-nom (sans accents ni caractères spéciaux)
+Pas de fichiers de travail dans le dossier (fichiers natifs texte et image)
+
+### Structure
+- index.html
+    - assets/
+      - css/
+        - reset.css
+        - style.css
+        - print.css
+      - fonts/
+        - <font>.woff2
+
+
+## Traitement des fichiers sources
 
 Pandoc pour convertir de odt à html
 
@@ -19,20 +25,7 @@ Pandoc pour convertir de odt à html
 
 https://pandoc.org/demos.html
 
------
-Après
------
-
-Serveur de développement local:
-- Python > dans le dossier courant `python -m http.server`
-- Node.js > live-server
-> extension vscode ou cli avec npm
-https://www.npmjs.com/package/live-server
-
-
-------
-images
-------
+## Traitement des images
 
 Pour compresser les images en webp:
 https://developers.google.com/speed/webp/docs/cwebp?hl=fr
@@ -44,10 +37,21 @@ Pour compresser par lot avec une commande bash:
 cwebp -q 80 $(file) -o $(file)
 done`
 
+## Traitement des fontes
 
-------
-fonts
-------
 https://github.com/google/woff2
 
 `woff2_compress myfont.ttf`
+
+## developpement
+
+Serveur de développement local:
+- Python > dans le dossier courant `python -m http.server`
+- Node.js > live-server
+> extension vscode ou cli avec npm
+https://www.npmjs.com/package/live-server
+
+### Metadonnées
+
+## version pdf
+https://weasyprint.org/
