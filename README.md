@@ -19,8 +19,10 @@ Pas de fichiers de travail dans le dossier (fichiers natifs texte et image)
 
 ## Traitement des fichiers sources
 
-Pandoc pour convertir de odt à html
+- Pandoc pour convertir de md à html
+`  pandoc -f markdown -t html5 -o index.html input.md -c style.css `
 
+- Pandoc pour convertir de odt à html
 `pandoc -t html -s Stiegler.odt -s -o output.html --metadata title="stiegler" `
 
 https://pandoc.org/demos.html
