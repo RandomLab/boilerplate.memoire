@@ -4,17 +4,19 @@
     /* variables */
     :root {
         --padding: 1.5rem;
-        --main-font-size: 1.2rem;
+        --main-font-size: 1rem;
         --color-grey: #333;
         --color-light: #efefef;
         --color-text: var(--color-grey);
         --color-background: var(--color-light);
+        --color-btn: rgb(108, 64, 179);
+        scroll-behavior: smooth;
     }
 
     /* global */
 
     html {
-        padding: var(--padding);
+        padding: 0;
         margin: auto;
         color: var(--color-text);
         font-size: var(--main-font-size);
@@ -24,29 +26,47 @@
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         font-size: 115%;
         background-color: var(--color-background);
+        width: 100vw;
+        height: 100vh;
     }
 
+    /* titre fixe */
+    .titre-fixe {
+        position: sticky;
+        top: 0;
+        background-color: var(--color-btn);
+        width: 100%;
+        padding: 5px 0 10px 5px;
+    }
+    
+    .titre-fixe h1 {
+        font-size: 1rem;
+        font-weight: normal;
+        color: rgb(6, 0, 83)
+    }
 
     /* structure */
     .container {
         max-width: 60%;
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: 200px;
     }
+
 
     /* images et légendes */
     .container figure {
-        margin: 20px 0 20px 0;
+        margin: 20px 0 120px 0;
     }
 
     .container figure figcaption {
         font-family: "FreeSerif", serif;
         font-size: 1rem;
-        color: darkblue;
+        color: black;
         text-align: center;
     }
 
-    /* titre et résumé */
+    /* chapeau */
     .container .header {
         text-align: center;
         margin-bottom: 2rem;
@@ -55,19 +75,63 @@
     .container .header h1 {
         font-family: "FreeSerif", serif;
         line-height: 1;
-        font-size: 3rem;
+        font-size: 4rem;
         font-weight: normal;
-        margin-bottom: 2rem;
+        margin: 120px 0 120px 0;
+    }
+
+    /* citation chapeau */
+    .container .header blockquote {
+        text-align: left;
+        width: 80%;
+    }
+
+    .container .header blockquote .signature {
+        text-align: right;
+        margin: 10px 0 0 0;
+        font-size: 0.9rem;
+    }
+
+    /* table des matières */
+
+    .container .sommaire {
+        list-style-type: none;
+        padding-inline-start: 2ch;
+        padding: 0;
+        font-size: 1.5rem;
+        border-bottom: 1px solid var(--color-text);
+        border-top: 1px solid var(--color-text);
+        margin: 120px 0 120px 0;
+        padding: 20px 0 20px 0;
+    }
+
+    .container .sommaire a {
+        text-decoration: none;
+        color: var(--color-text);
+    }
+
+    .container .sommaire a:hover {
+        text-decoration: wavy underline;
+        text-decoration-thickness: 1px;
     }
 
     /* corps du texte */
+
+    .container .chapitre {
+        margin: 0 0 20px 0;
+    }
+
     .container .chapitre h2 {
         font-weight: normal;
         margin: 0 0 10px 0;
+        font-size: 2rem;
     }
+
+    /* paragraphe */
 
     .container .chapitre p {
         font-family: "FreeSerif", serif;
+        margin: 0 0 20px 0;
     }
 
     .container .chapitre p i {
@@ -78,21 +142,106 @@
         font-weight: bold;
     }
 
+    /* appel de note */
     .container .chapitre p sup {
         top: -0.5em;
     }
 
     .container .chapitre p sup a {
-        color: red;
+        color: rgb(89, 0, 255);
         text-decoration: none;
+    }
+
+    .container .chapitre p sup a:hover {
+        color: rgb(218, 17, 17);
+    }
+
+    /* definition */
+    .container .chapitre p .definition {
+        background-color: rgb(166, 255, 0);
+        cursor: pointer;
+        position: relative;
+    }
+
+    .container .chapitre p .hide {
+        display: none;
+    }
+
+    .container .chapitre p .definition:hover + .hide {
+        display: block;
+        position: absolute;
+        font-family: "Freesans", sans-serif;
+        background-color: rgb(154, 119, 194);
+        font-size: 0.8rem;
+        line-height: 1.2;
+        width: 100px;
+        padding: 5px;
+        transform: translate(-120px, -25px);
+    }
+
+    /* second paragraphe */
+    .container .chapitre .paragraphe {
+        font-family: "FreeSans", sans-serif;
+        color: rgb(145, 141, 141);
+    }
+
+    /* citation */
+    .container .chapitre blockquote {
+        margin: 60px 0 60px 0;
+        padding: 0 0 0 60px;
+        width: 80%;
+    }
+
+    .container .chapitre blockquote .signature {
+        font-size: 0.9rem;
+        text-align: right;
+        margin: 10px 0 0 0;
+    }
+
+
+    /* video */
+    .container .chapitre .video-container {
+        margin: 20px 0 120px 0;
+    }
+
+    .container .chapitre .video {
+        aspect-ratio: 16 / 9;
+        width: 100%;
+    }
+
+    /* table */
+
+    .data {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 60px 0 120px 0;
+    }
+
+    .data td, .data tr {
+        padding: 10px;
+        border: 1px solid grey;
+    }
+
+    .data tr:nth-child(even) {
+        background-color: rgb(168, 168, 168);
+    }
+
+    .data th {
+        background-color: var(--color-grey);
+        color: white;
+        font-weight: normal;
+        padding: 12px;
+        text-align: left;
     }
 
     /* notes */
     .container .notes {
-        margin: 2rem 0 0 0;
-        width: 80%;
+        margin: 60px 0 0 0;
+        padding: 60px 0 0 0;
+        width: 100%;
         font-size: 0.8rem;
         line-height: 1rem;
+        border-top: 1px solid black;
     }
 
     .container .notes ol {
@@ -107,4 +256,56 @@
     .container .notes ol li a {
         color: var(--color-text);
     }
+
+    /* annexe */
+
+    .container .annexe {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 120px 0 0 0;
+        border-top: 1px solid black;
+        padding: 60px 0 0 0;
+    }
+
+    .container .annexe article {
+        flex: 1 0 50%;
+        margin: 0 0 30px 0;
+        padding: 0 30px 0 0;
+    }
+
+    .container .annexe article:last-child {
+        flex: 0 1 50%;
+    }
+
+    .container .annexe article h2 {
+        font-size: 1rem;
+        font-weight: normal;
+        margin: 0 0 10px 0;
+        line-height: 1.2;
+    }
+
+    .container .annexe article p {
+        font-family: "Freeserif", serif;
+        font-size: 0.9rem;
+    }
+
+    /* bouton pour remonter la page */
+
+    .bouton-top {
+        position: fixed;
+        right: 1rem;
+        bottom: 1rem;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        background-color: var(--color-btn);
+
+    }
+
+    .bouton-top:hover {
+        background-color: var(--color-grey);
+    }
+
 }

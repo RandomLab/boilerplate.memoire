@@ -64,23 +64,11 @@ https://www.npmjs.com/package/live-server
 https://weasyprint.org/
 
 - Pour générer la version pdf depuis votre page web 
+
 `weasyprint http://127.0.0.1 memoire.pdf` 
 
 # TODO
 
-> table des matières / sommaire
-> annexe
-
-> videos
-- intégration youtube
-- image dans pdf
-
-> plusieurs pages ?
-
-> elements fixes / position
-
-> citations
-
-> plusieurs types de paragraphes
-
+> videos une image dans pdf
 > element qui affiche un autre element au survol (ex: definition)
+> btn pour remonter la page 
