@@ -8,6 +8,7 @@ Pas de fichiers de travail dans le dossier (fichiers natifs texte et image)
 
 ### Structure
 - index.html
+    - images/
     - assets/
       - css/
         - reset.css
@@ -27,20 +28,21 @@ Pas de fichiers de travail dans le dossier (fichiers natifs texte et image)
 
 https://pandoc.org/demos.html
 
-## Traitement des images
+## Compression des images
 
-Pour compresser les images en webp:
+- Pour compresser les images en webp:
 https://developers.google.com/speed/webp/docs/cwebp?hl=fr
 
 `cwebp -q 80 neom-CzwL_vn445k-unsplash.jpg -o neom-CzwL_vn445k-unsplash.webp`
 
-Pour compresser par lot avec une commande bash:
+- Pour compresser par lot avec une commande bash:
 `for file in *; do
 cwebp -q 80 $(file) -o $(file)
 done`
 
 ## Traitement des fontes
 
+- Pour compresser les fichiers de fontes `otf` et `ttf` en `woff2`:
 https://github.com/google/woff2
 
 `woff2_compress myfont.ttf`
@@ -55,5 +57,30 @@ https://www.npmjs.com/package/live-server
 
 ### Metadonnées
 
+- Ajouter des metadonnées dans la page `index.html`
+
 ## version pdf
+
 https://weasyprint.org/
+
+- Pour générer la version pdf depuis votre page web 
+`weasyprint http://127.0.0.1 memoire.pdf` 
+
+# TODO
+
+> table des matières / sommaire
+> annexe
+
+> videos
+- intégration youtube
+- image dans pdf
+
+> plusieurs pages ?
+
+> elements fixes / position
+
+> citations
+
+> plusieurs types de paragraphes
+
+> element qui affiche un autre element au survol (ex: definition)
