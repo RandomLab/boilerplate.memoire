@@ -84,6 +84,7 @@
     .container .header blockquote {
         text-align: left;
         width: 80%;
+        margin: 0;
     }
 
     .container .header blockquote .signature {
@@ -113,6 +114,10 @@
     .container .sommaire a:hover {
         text-decoration: wavy underline;
         text-decoration-thickness: 1px;
+    }
+
+    .container .sommaire .titre {
+        margin: 0;
     }
 
     /* corps du texte */
@@ -273,6 +278,7 @@
         flex: 1 0 50%;
         margin: 0 0 30px 0;
         padding: 0 30px 0 0;
+        width: 100%;
     }
 
     .container .annexe article:last-child {
@@ -308,4 +314,111 @@
         background-color: var(--color-grey);
     }
 
+    
+
+}
+
+/* version mobile */
+
+@media only screen and (min-width: 1px) and (max-width: 900px) {
+
+
+    /* structure */
+
+    .container {
+        max-width: 100%;
+    }
+
+     /* citation chapeau */
+
+    .container .header blockquote {
+        text-align: left;
+        width: 90%;
+        margin: 0 20px 0 20px;
+    }
+
+    /* table des matières */
+
+    .container .sommaire {
+        margin: 60px 0 60px 0;
+    }
+
+    .container .sommaire .titre {
+        margin: 0 0 0 20px;
+    }
+
+    /* corps du texte */
+
+    .container .chapitre {
+        margin: 0 20px 0 20px;
+    }
+
+    /* paragraphe */
+
+    .container .chapitre p {
+        font-size: 1.3rem;
+    }
+
+    /* appel de note */
+
+    .container .chapitre p sup {
+        font-size: 1.3rem;
+    }
+
+    /* definition */
+
+    .container .chapitre p .hide {
+        display: hide;
+    }
+
+    .container .chapitre p .definition:hover + .hide {
+        transform: unset;
+        font-size: 1rem;
+        width: 80%;
+    }
+
+
+    /* citation */
+    .container .chapitre blockquote {
+        padding: 0;
+        width: 100%;
+    }
+
+    /* table */
+    .data {
+        margin: 60px 20px 80px 20px;
+        width: 90%;
+    }
+
+    /* notes */
+
+    .container .notes {
+        font-size: 1rem;
+        line-height: 1.6rem;
+    }
+
+    .container .notes ol {
+        padding: 0 30px 0 30px;
+    }
+
+    /* annexe */
+    .container .annexe {
+        margin: 60px 0 0 0;
+        flex-direction: column;
+    }
+
+    .container .annexe article {
+        flex: 1 0 auto;
+        margin: 0 0 60px 0;
+        padding: 0 0 0 20px;
+        width: 90%;
+    }
+
+    .container .annexe article h2 {
+        font-size: 1.3rem;
+    }
+
+    .container .annexe article p {
+        font-size: 1rem;
+    }
 }
