@@ -66,9 +66,3 @@ https://weasyprint.org/
 - Pour générer la version pdf depuis votre page web 
 
 `weasyprint http://127.0.0.1 memoire.pdf` 
-
-# TODO
-
-> videos une image dans pdf
-> element qui affiche un autre element au survol (ex: definition)
-> btn pour remonter la page 
