@@ -14,8 +14,9 @@ Pas de fichiers de travail dans le dossier (fichiers natifs texte et image)
         - reset.css
         - style.css
         - print.css
-      - fonts/
-        - <font>.woff2
+        - fonts.css
+        - fonts/
+          - <font>.woff2
 
 
 ## Traitement des fichiers sources
@@ -66,3 +67,7 @@ https://weasyprint.org/
 - Pour générer la version pdf depuis votre page web 
 
 `weasyprint http://127.0.0.1 memoire.pdf` 
+
+## Licence
+[Creative Commons Attribution NonCommercial 4.0 Inter](https://creativecommons.org/licenses/by-nc/4.0/deed.en)
+sauf images et texte cités, vidéo, fontes qui ont leur propres licences
