@@ -71,3 +71,8 @@ https://weasyprint.org/
 ## Licence
 [Creative Commons Attribution NonCommercial 4.0 Inter](https://creativecommons.org/licenses/by-nc/4.0/deed.en)
 sauf images et texte cités, vidéo, fontes qui ont leur propres licences
+
+
+# TODO
+- optimisation pdf > ghostscript
+- vérifier pour le 24 > envoie du pdf
