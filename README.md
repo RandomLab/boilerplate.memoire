@@ -76,3 +76,4 @@ sauf images et texte cités, vidéo, fontes qui ont leur propres licences
 # TODO
 - optimisation pdf > ghostscript
 - vérifier pour le 24 > envoie du pdf
+- extension live server vscode
