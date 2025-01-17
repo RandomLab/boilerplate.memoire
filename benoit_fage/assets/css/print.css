@@ -1,0 +1,251 @@
+@media print {
+
+    /* règle pour la page */
+
+    @page {
+      margin: 20mm 10mm 20mm 10mm;
+      size: 210mm 297mm;
+    }
+
+    @page {
+        @top-center {
+            content: "Des serveurs à la fédération féministe";
+            height: 10mm;
+            text-align: center;
+            font-family: "FreeSans";
+            font-size: 9pt;
+
+        }
+
+        @bottom-center {
+            content: counter(page);
+            height: 10mm;
+            text-align: center;
+            width: 10mm;
+            font-family: "FreeSans";
+            font-size: 9pt;
+        }
+    }
+
+    /* global */
+
+    html {
+        padding: 0;
+        margin: 0;
+        /* font-size: 11pt;
+        line-height: 1.5; */
+    }
+
+    body {
+        background-color: white;
+        color: black;
+        font-family: "FreeSerif";
+        font-weight: normal;
+    }
+
+    /* élements ignorés */
+
+    .titre-fixe {
+        display: none;
+    }
+
+    .video-container {
+        display: none;
+    }
+
+    .definition {
+        display: none;
+    }
+
+    /* général */
+
+    #main {
+        max-width: 100%;
+    }
+
+    #main figure {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    #main figure figcaption {
+        color: black;
+        margin: 2mm 0 0 0;
+        font-size: 9pt;
+        text-align: center;
+        font-family: "Freesans";
+    }
+
+    #main figure img {
+        width: 100%;
+    }
+
+    #main blockquote {
+        font-family: "Freesans";
+        font-size: 13pt;
+        line-height: 1.5;
+        margin: 10mm 0 0 0;
+    }
+
+    #main blockquote .signature {
+        font-size: 11pt;
+        text-align: right;
+    }
+
+    /* header */
+
+    #header {
+        width: 100%;
+        margin-top: 20mm;
+        page-break-after: always;
+    }
+
+    #header h1 {
+        font-size: 40pt;
+        line-height: 0.9;
+        font-weight: normal;
+    }
+
+    #header p {
+        text-align: left;
+        font-size: 25pt;
+        line-height: 1.3;
+        margin: 5mm 0 0 0;
+        padding: 0;
+    }
+
+    /* sommaire */
+
+    #sommaire {
+        list-style: none;
+        margin: 0 0 10mm 0;
+        padding: 0;
+        font-size: 15pt;
+        line-height: 1.3;
+        font-family: "Freesans";
+    }
+
+    #sommaire a {
+        text-decoration: none;
+        color: black;
+    }
+
+    /* chapitre */
+
+    section[content] h2  {
+        font-size: 13pt;
+        font-family: "Freesans";
+        font-weight: normal;
+        text-transform: uppercase;
+        margin: 10mm 0 3mm 0;
+        padding: 0;
+    }
+
+    section[content] p {
+        font-size: 13pt;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+    }
+
+    section[content] #image {
+        margin-top: 20mm;
+        margin-bottom: 20mm;
+        padding: 0;
+    }
+
+    section[content] sup {
+        font-size: 9pt;
+        font-family: "Freesans";
+    }
+
+    section[content] sup a {
+        color: black;
+        text-decoration: none;
+    }
+
+    section[content] #citation {
+        page-break-before: always;
+        margin-bottom: 10mm;
+    }
+
+    /* tableau */
+
+    #data {
+        page-break-before: always;
+        width: 100%;
+        border-collapse: collapse;
+        font-family: "Freesans";
+        font-size: 11pt;
+    }
+
+    #data, #data td, #data tr, #data th {
+        padding: 3mm;
+        border: 0.3mm solid black;
+    }
+
+    #data tr:nth-child(even) {
+        background-color: rgb(168, 168, 168);
+    }
+
+    #data th {
+        border: none;
+        font-weight: normal;
+    }
+
+    /* notes */
+
+    #notes {
+        margin: 20mm 0 10mm 0;
+        padding: 10mm 0 0 0;
+        width: 100%;
+        font-family: "Freesans";
+        border-top: 0.2mm solid black;
+    }
+
+    #notes ol {
+        margin: 0;
+        padding: 0 0 0 5mm;
+    }
+
+    #notes ol li {
+        padding: 0 5mm 0 10mm;
+        margin: 2mm 0 2mm 0;
+        font-size: 9pt;
+        line-height: 1.3;
+    }
+
+    #notes ol li p {
+        margin: 0 0 3mm 0;
+        padding: 0 5mm 0 3mm;
+    }
+
+    #notes ol li p a {
+        color: black;
+    }
+
+    /* annexe */
+
+    #annexe {
+        margin: 20mm 0 10mm 0;
+        padding: 10mm 0 0 0;
+        width: 100%;
+        border-top: 0.2mm solid black;
+    }
+
+    #annexe article h2 {
+        font-family: "Freesans";
+        font-weight: normal;
+        font-size: 11pt;
+        margin: 0 0 3mm 0;
+        padding: 0 0 0 0;
+    }
+
+    #annexe article p {
+        margin: 0 0 3mm 0;
+        padding: 0 5mm 0 0;
+        font-size: 11pt;
+        line-height: 1.3;
+    }
+}
