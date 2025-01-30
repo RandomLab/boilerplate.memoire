@@ -23,3 +23,15 @@
   font-weight: bold;
   font-style: italic;
 }
+
+@font-face {
+  font-family: Terminal_Grotesque;
+  src: url("./fonts/terminal-grotesque.woff2") format('woff2');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: SpaceMono-Regular;
+  src: url("./fonts/SpaceMono-Regular.woff2") format('woff2');
+}

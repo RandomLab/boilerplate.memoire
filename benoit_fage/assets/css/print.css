@@ -1,5 +1,40 @@
 @media print {
 
+    .AloneH {
+        display: grid;
+        grid-template-columns: 1fr; 
+        /*justify-content: center; /*Centre horizontalement */
+        align-items: center; /* Centre verticalement */
+        width: 80%; /* S’assure que la largeur suit le conteneur */
+        height: auto; /* Ajuste la hauteur automatiquement */
+        /*margin: 10mm 10mm 10mm 10mm; /* Centre avec des marges */
+    }
+
+    .AloneH img {
+        max-width: 100%; /* Limite à la largeur du conteneur */
+        height: auto; /* Maintient les proportions */
+        /*page-break-inside: auto;/*  Évite que l’image soit coupée sur deux pages */
+        object-fit: contain; /* Remplit le conteneur tout en coupant les parties excédentaires si nécessaire */
+    }
+
+    .Two-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Deux colonnes égales */
+        gap: 0px 10px; /* Espace entre les images */
+        width: 100%; /* La grille occupe toute la largeur */
+        margin: 20px 0; /* Espacement vertical */
+    }
+
+    .Two-grid img {
+        width: 100%; /* Adapte à la largeur de la colonne */
+        height: auto; /* Maintient les proportions */
+        object-fit: contain; /* Remplit le conteneur tout en coupant les parties excédentaires si nécessaire */
+    }
+
+    div{
+        font-size: 9pt;
+    }
+
     /* règle pour la page */
 
     @page {
@@ -9,8 +44,8 @@
 
     @page {
         @top-center {
-            content: "Des serveurs à la fédération féministe";
-            height: 10mm;
+            content: "Au travers des manifestes numérique";
+            height: 5mm;
             text-align: center;
             font-family: "FreeSans";
             font-size: 9pt;
@@ -34,13 +69,15 @@
         margin: 0;
         /* font-size: 11pt;
         line-height: 1.5; */
+        background-color: rgb(201, 201, 201);
     }
 
     body {
-        background-color: white;
+        /*background-color: white;*/
+        background-color: rgb(201, 201, 201);
         color: black;
-        font-family: "FreeSerif";
-        font-weight: normal;
+        font-family: "SpaceMono-Regular";
+        font-weight: lighter;
     }
 
     /* élements ignorés */
@@ -134,16 +171,19 @@
     /* chapitre */
 
     section[content] h2  {
-        font-size: 13pt;
-        font-family: "Freesans";
+        font-size: 60pt;
+        font-family: "Terminal_Grotesque";
+        color: rgb(65, 117, 164);
         font-weight: normal;
-        text-transform: uppercase;
-        margin: 10mm 0 3mm 0;
+        text-transform: capitalize;
+        text-align: center;
+        margin: 40mm 0 3mm 0;
         padding: 0;
     }
 
     section[content] p {
         font-size: 13pt;
+        text-align: center;
         line-height: 1.5;
         margin: 0;
         padding: 0;
@@ -186,7 +226,8 @@
     }
 
     #data tr:nth-child(even) {
-        background-color: rgb(168, 168, 168);
+        /*background-color: rgb(168, 168, 168);*/
+        background-color: rgb(0, 0, 0);
     }
 
     #data th {
