@@ -20,9 +20,18 @@
         display: grid;
 	    grid-template-rows: 1fr;
 	    grid-template-columns: 1fr;
-	    width: 90%;
-	    height: 90%;
-        margin: 20px;
+        justify-items: center;
+	    width: 100%;
+	    height: auto;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .AloneH img {
+        max-width: 100%;
+        height: auto;
+        objet-fit: contain;
     }
 
     .Two-grid {
@@ -40,6 +49,12 @@
         border: none; /* Supprime les bordures optionnelles */
     }
 
+    .link{
+        color: blue;
+        text-decoration: none;
+    }
+
+
     /* global */
 
     html {
@@ -53,7 +68,8 @@
         /*font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";*/
         font-family:f "SpaceMono-Regular";
         font-size: 115%;
-        background-color: var(--color-background);
+        /*background-color: var(--color-background);*/
+        background-color: rgb(201, 201, 201);
         width: 100vw;
         height: 100vh;
     }
@@ -101,7 +117,8 @@
     }
 
     .container .header h1 {
-        font-family: "FreeSerif", serif;
+        /*font-family: "FreeSerif", serif;*/
+        font-family: "Terminal_Grotesque";
         line-height: 1;
         font-size: 4rem;
         font-weight: normal;
@@ -132,6 +149,7 @@
         border-top: 1px solid var(--color-text);
         margin: 120px 0 120px 0;
         padding: 20px 0 20px 0;
+        text-align: center;
     }
 
     .container .sommaire a {
@@ -152,6 +170,7 @@
 
     .container .chapitre {
         margin: 0 0 20px 0;
+        text-align: center;
     }
 
     .container .chapitre h2 {
@@ -177,7 +196,7 @@
     /* paragraphe */
 
     .container .chapitre p {
-        font-family: "FreeSerif", serif;
+        font-family: "SpaceMono-Regular";
         margin: 0 0 20px 0;
     }
 
@@ -200,12 +219,14 @@
     }
 
     .container .chapitre p sup a:hover {
-        color: rgb(218, 17, 17);
+        *color: rgb(218, 17, 17);*/
     }
 
     /* definition */
     .container .chapitre p .definition {
-        background-color: rgb(166, 255, 0);
+        background-color: rgba(173, 62, 57, 0.4);
+        color: black;
+        border-radius: 3px;
         cursor: pointer;
         position: relative;
     }
@@ -217,21 +238,23 @@
     .container .chapitre p .definition:hover + .hide {
         display: block;
         position: absolute;
-        /*font-family: "Freesans", sans-serif;*/
-        font-family: "Freesans";
-        background-color: rgb(154, 119, 194);
-        font-size: 0.8rem;
+        font-family: "Freesans", sans-serif;
+        background-color: #ad3e39;
+        color: white;
+        border-radius: 3px;
+        font-size: 1rem;
         line-height: 1.2;
-        width: 100px;
+        width: 180px;
         padding: 5px;
-        transform: translate(-120px, -25px);
+        transform: translate(-180px, -25px);
     }
 
     /* second paragraphe */
     .container .chapitre .paragraphe {
         font-family: "SpaceMono-Regular";
         text-align: center;
-        color: rgb(145, 141, 141);
+        /*color: rgb(145, 141, 141);*/ 
+        color: black;
     }
 
     /* citation */
