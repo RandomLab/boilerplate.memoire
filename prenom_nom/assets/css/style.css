@@ -9,7 +9,7 @@
         --color-light: #efefef;
         --color-text: var(--color-grey);
         --color-background: var(--color-light);
-        --color-btn: rgb(108, 64, 179);
+        --color-btn: rgb(0, 0, 255);
         scroll-behavior: smooth;
     }
 
@@ -42,7 +42,7 @@
     .titre-fixe h1 {
         font-size: 1rem;
         font-weight: normal;
-        color: rgb(6, 0, 83)
+        color: rgb(255, 255, 255)
     }
 
     /* structure */
@@ -305,16 +305,17 @@
         position: fixed;
         right: 1rem;
         bottom: 1rem;
-        width: 3rem;
-        height: 3rem;
-        border-radius: 50%;
+        width: 5rem;
+        height: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    /* .bouton-top:hover {
         background-color: var(--color-btn);
-
-    }
-
-    .bouton-top:hover {
-        background-color: var(--color-grey);
-    }
+    } */
 
     
 
