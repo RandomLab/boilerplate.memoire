@@ -62,10 +62,9 @@ https://www.npmjs.com/package/live-server
 
 ## version pdf
 
-https://weasyprint.org/
-
+- Attention, les classes `css` dans l'html sont importantes pour parser correctement les contenus en pdf. 
+- La librairie utilisée : https://weasyprint.org/
 - Pour générer la version pdf depuis votre page web 
-
 `weasyprint http://127.0.0.1 memoire.pdf` 
 
 ## Licence
